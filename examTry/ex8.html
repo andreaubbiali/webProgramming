@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+<aside draggable="true" onoffline="myFunction">
+<p>Count numbers: <output id="result"></output></p>
+<button onclick="startWorker()">Start Worker</button>
+<button onclick="stopWorker">Stop Worker</button>
+</body>
+
+<script>
+console.log("ciao");
+    function startWorker(){
+        console.log('ciao');
+        document.getElementById("result").value = 5;
+    }
+
+    function stopWorker(){
+        document.getElementById("result").value = 5;
+    }
+</script>
+</html>
