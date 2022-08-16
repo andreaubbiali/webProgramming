@@ -2,13 +2,16 @@ const form = document.getElementById('todo-cont'),
   input = document.getElementById('input'),
   todosUL = document.getElementById('todos');
 
+  // on loading load the content of list from local storage
   document.addEventListener('DOMContentLoaded', allStorage());
 
+  // on sumbit of the todo-cont form do this function
   form.addEventListener('submit', (e)=>{
     e.preventDefault();
     setTodo();
   })
 
+  // add a new todo element
   function setTodo(){
     let todoText = input.value;
     console.log(todoText);
@@ -29,6 +32,7 @@ const form = document.getElementById('todo-cont'),
     });
   } 
 
+  // load elements from storage
   function allStorage(){
     console.log('allStorage');
     var values = [],
@@ -43,6 +47,7 @@ const form = document.getElementById('todo-cont'),
     }
   }
 
+  // create the list on loading
   function viewTodo(key, value){
     console.log('viewTodo');
     let todoEl = document.createElement('li');
