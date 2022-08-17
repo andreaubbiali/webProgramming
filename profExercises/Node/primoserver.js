@@ -1,7 +1,7 @@
 const http = require('http');
 const fs = require('fs');
 
-const port = 8383;
+const port = 3000;
 var s = http.createServer();
 s.listen(port);
 
