@@ -1,10 +1,14 @@
+/**
+ * Create the checksum of the file reading all the big file (problem on resources)
+ */
+
 const fs = require("fs");
 const crypto = require("crypto");
  
-fs.readFile("bigFile", (readErr, data) => {
+fs.readFile("file.txt", (readErr, data) => {
   if (readErr) return console.log(readErr);
   const hash = crypto.createHash("sha256").update(data).digest("base64");
-  fs.writeFile("./checksum.txt", hash, (writeErr) => {
+  fs.writeFile("./checksumBigFile.txt", hash, (writeErr) => {
     writeErr && console.error(err);
   });
 });
