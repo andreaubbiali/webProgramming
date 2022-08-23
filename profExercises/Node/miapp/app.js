@@ -1,3 +1,17 @@
+/**
+ * Different requests types
+ * 
+ * localhost:3000 -> is been rendered the form with 2 textbox to insert username and password, clicking on the button is been created a POST request (/login)
+ * 
+ * localhost:3000/cookies -> return how many times you visited the page
+ * 
+ * localhost:3000/citta/:name -> get name as parameter
+ * 
+ * localhost:3000/uni* -> match this pattern with all string that has 'uni' as prefix and * as suffix. 
+ * 
+ * it has also an acess log that logs every access to a file "access.log"
+ */
+
 const express = require('express');
 const morgan = require('morgan');
 const path = require('path');
