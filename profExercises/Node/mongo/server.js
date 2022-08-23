@@ -1,3 +1,14 @@
+/**
+ * This code render all the HTML page.
+ * With the first call "/" nothing is rendered.
+ * With the call "/weatherAPI" is rendered the page with datas from the weather api. Are also saved in the database the datas
+ * With the call "/showDataDB" is rendered the page with datas from the database.
+ * 
+ * The page that is been rendered is the one in the "weatherAPI.ejs" file.
+ * 
+ */
+
+
 const express = require('express');
 const bodyParser = require('body-parser')
 const axios = require('axios');
